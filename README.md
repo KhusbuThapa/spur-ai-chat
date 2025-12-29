@@ -1,17 +1,18 @@
 # Spur AI Chat (Demo)
 
-A simple **full-stack AI support chat demo** built as part of a take-home assignment.  
-This project demonstrates **frontend–backend communication**, **clean API design**, and **basic AI integration**.
+A simple full-stack AI support chat demo built as part of a take-home assignment.  
+This project demonstrates frontend–backend communication, clean API design, and basic AI integration.
 
 ---
 
 ## ✨ Features
 
-- Chat-style UI for user messages
-- Backend API to handle chat requests
-- AI-style responses (demo-ready)
-- Clean separation of frontend and backend
-- Environment-based configuration
+- Simple chat UI (user → AI)
+- React frontend built with Vite
+- Node.js + Express backend
+- REST API communication
+- Environment variable–based configuration
+- Clean project structure (no secrets committed)
 
 ---
 
@@ -21,15 +22,15 @@ This project demonstrates **frontend–backend communication**, **clean API desi
 - React (Vite)
 - TypeScript
 - Fetch API
-- Simple responsive UI
+- Basic responsive UI
 
 ### Backend
 - Node.js
-- Express.js
+- Express
 - TypeScript
-- OpenAI SDK (configurable)
-- CORS
+- OpenAI SDK
 - dotenv
+- CORS
 
 ---
 
@@ -38,218 +39,111 @@ This project demonstrates **frontend–backend communication**, **clean API desi
 spur-ai-chat/
 │
 ├── frontend/ # React frontend
-│ ├── src/
-│ ├── public/
-│ └── package.json
 │
 ├── backend/ # Express backend
 │ ├── src/
 │ │ └── index.ts
 │ ├── package.json
-│ └── .env.example
+│ └── package-lock.json
 │
+├── .gitignore
 └── README.md
 
-
 ---
 
-## ⚙️ Setup Instructions
+## 🚀 Getting Started (Local Setup)
 
 ### 1️⃣ Clone the repository
+
 ```bash
 git clone https://github.com/KhusbuThapa/spur-ai-chat.git
 cd spur-ai-chat
+
+---
 
 2️⃣ Backend Setup
 cd backend
 npm install
 
+Create a .env file inside the backend folder:
 
-Create a .env file:
+OPENAI_API_KEY=your_openai_api_key_here
+PORT=5000
 
-OPENAI_API_KEY=your_api_key_here
+Create a .env file inside the backend folder:
 
+OPENAI_API_KEY=your_openai_api_key_here
+PORT=5000
 
-Run backend:
+Start the backend server:
 
 npm run dev
 
-
-Backend runs on:
+Backend will run on:
 
 http://localhost:5000
 
 3️⃣ Frontend Setup
-cd frontend
+cd ../frontend
 npm install
 npm run dev
 
-
-Frontend runs on:
+Frontend will run on:
 
 http://localhost:5173
 
-🔁 API Endpoint
+Frontend will run on:
+
+http://localhost:5173
+
+🔄 API Overview
+Health Check
+
+GET /
+
+Returns: "Spur AI Chat Backend Running"
+
+Send Chat Message
+
 POST /chat/message
 
-Request
+Request body:
 
 {
   "message": "Hello"
 }
-
-
-Response
+Response:
 
 {
-  "reply": "Thanks for your message!",
+  "reply": "AI response text",
   "sessionId": "demo-session"
 }
 
 🔐 Environment Variables
 
-.env is not committed
+.env files are intentionally excluded from the repository
 
-Use .env.example as reference
+API keys must be provided locally
 
-API keys are handled securely
+This follows standard security best practices
 
-🚀 Notes
-
-This is a demo-focused implementation
-
-Designed for clarity, simplicity, and correctness
-
-Easy to extend with real AI responses, sessions, or database storage
-
-👤 Author
+👩‍💻 Author
 
 Khusbu Thapa
+GitHub: https://github.com/KhusbuThapa
 
 
 ---
 
-## ✅ What to do now (very important)
+## ✅ What to do now (IMPORTANT)
 
-1. Open `README.md` in VS Code  
-2. **Delete everything**
-3. Paste the content above
-4. Save
-5. Run:
+1. Open `README.md`
+2. **Replace everything** with the content above
+3. Save the file
+4. Run:
 
 ```bash
 git add README.md
-git commit -m "Improve README documentation"
+git commit -m "Update README with setup and project details"
 git push
-
-Final reassurance ❤️
-
-Your project structure is correct
-
-Your repo is clean
-
-This README looks professional
-
-A developer or recruiter will be impressed, especially knowing you’re a fresher
-
-If you want next:
-
-✅ “Make README shorter”
-
-✅ “Make README more startup-style”
-
-✅ “Help me deploy and share link”
-
-Just tell me 💪
-
-
----
-
-## ⚙️ Setup Instructions
-
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/KhusbuThapa/spur-ai-chat.git
-cd spur-ai-chat
-
-2️⃣ Backend Setup
-cd backend
-npm install
-
-Create a .env file:
-
-OPENAI_API_KEY=your_api_key_here
-
-
-Run backend:
-
-npm run dev
-
-
-Backend runs on:
-
-http://localhost:5000
-
-3️⃣ Frontend Setup
-cd frontend
-npm install
-npm run dev
-
-
-Frontend runs on:
-
-http://localhost:5173
-
-🔁 API Endpoint
-POST /chat/message
-
-Request
-
-{
-  "message": "Hello"
-}
-
-Response
-
-{
-  "reply": "Thanks for your message!",
-  "sessionId": "demo-session"
-}
-
-🔐 Environment Variables
-
-.env is not committed
-
-Use .env.example as reference
-
-API keys are handled securely
-
-🚀 Notes
-
-This is a demo-focused implementation
-
-Designed for clarity, simplicity, and correctness
-
-Easy to extend with real AI responses, sessions, or database storage
-
-👤 Author
-
-Khusbu Thapa
-
-
----
-
-## ✅ What to do now (very important)
-
-1. Open `README.md` in VS Code  
-2. **Delete everything**
-3. Paste the content above
-4. Save
-5. Run:
-
-```bash
-git add README.md
-git commit -m "Improve README documentation"
-git push
-
 
